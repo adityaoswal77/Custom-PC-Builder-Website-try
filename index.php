@@ -31,7 +31,6 @@
 <style>
 h1{
     padding:20px;
-    font-border:20px;
 }
 ul {
     margin:0;

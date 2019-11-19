@@ -38,10 +38,11 @@ $phone = $_GET['phone'];
 $pass = $_GET['pass'];
 
 $query="INSERT INTO `user`(`name`, `email`, `phone`, `password`) VALUES ('$name',$email','$phone','$pass')";
+echo $query;
 $run = mysqli_query($conn,$query);
 if ($run==TRUE)
 {
-    echo " Welcome" .Srun['name'] ;
+    echo " Welcome" ;
     echo "You have been successfully Registered";
 }
 else{

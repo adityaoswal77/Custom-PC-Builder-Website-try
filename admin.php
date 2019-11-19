@@ -17,8 +17,8 @@
 <hr>
 <ul>
     <li style="background-color:blue; border-radius:40px;height:45px"><a href="insert.php">INSERT A NEW ITEM</a></li>
-    <li style="background-color:chocolate; border-radius:40px; height:25px"><a href="./login.php"> Delete </a></li>
-    <li style="background-color:chocolate; border-radius:40px; height:25px"><a href="fetch.php"> Display </a></li>
+    <li style="background-color:chocolate; border-radius:40px; height:25px"><a href="delete.php"> Delete </a></li>
+    <li style="background-color:chocolate; border-radius:40px; height:25px"><a href="update.php"> Update </a></li>
 
 </ul>      
     <hr>      
