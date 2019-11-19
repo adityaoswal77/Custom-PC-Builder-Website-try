@@ -12,8 +12,8 @@
 <hr>
 <ul>
     <li style="background-color:blue; border-radius:40px;height:45px"><a href="insert.php">INSERT A NEW ITEM</a></li>
-    <li style="background-color:chocolate; border-radius:40px; height:25px"><a href="./login.php"> DELETE </a></li>
-    <li style="background-color:chocolate; border-radius:40px; height:25px"><a href="fetch.php"> UPDATE </a></li>
+    <li style="background-color:chocolate; border-radius:40px; height:25px"><a href="delete.php"> DELETE </a></li>
+    <li style="background-color:chocolate; border-radius:40px; height:25px"><a href="update.php"> UPDATE </a></li>
 
 </ul>      
     <hr>      
@@ -48,12 +48,6 @@ ul li a{
 
 </style>
 
-
-
-
-
-
-
 <?php
 $conn = mysqli_connect("localhost","root","","custom");
 if ($conn == false)
@@ -62,7 +56,7 @@ else {	echo "successfully connected";}
 ?>
 <html>
 <body>
-    <form name="login" action="submit" method="post"> 
+    <form name="login" action="cpu.php" onsubmit="return Register()"> 
             <h1 id="">ADD A NEW ITEM</h1>
             <p>Please fill in this form to add a new item</p>
             <hr>
@@ -87,22 +81,20 @@ else {	echo "successfully connected";}
 </html>
 <?php
 
-$company = $_GET['item_company'];
-$name = $_GET['item_name'];
-$info = $_GET['item_info'];
-$price = $_GET['item_price'];
-$type = $_GET['item_type'];
+$company = $_GET['itemcompany'];
+$name = $_GET['itemname'];
+$info = $_GET['iteminfo'];
+$price = $_GET['itemprice'];
+$type = $_GET['itemtype'];
 
-$query="INSERT INTO `item`(`item_company`, `item_name`, `item_info`, `item_price`, `item_type`) VALUES ('$company','$name','$info','$price','$type')";
-$row = mysqli_query($conn,$query);
-if ($row==TRUE)
+$query="";
+$run = mysqli_query($conn,$query);
+if ($run==TRUE)
 {
-    echo " Welcome" .$row['name'] ;
+    echo " Welcome" .Srun['name'] ;
     echo "Item has been successfully added";
 }
 else{
     echo "Item has not been registered";
 }
-
-header("refresh: url=index.php")
 ?>
