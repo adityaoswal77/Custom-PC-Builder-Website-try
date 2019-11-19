@@ -62,7 +62,7 @@ else {	echo "successfully connected";}
 ?>
 <html>
 <body>
-    <form name="login" action="submit" method="post"> 
+    <form name="login" action="connect.php" method="GET"> 
             <h1 id="">ADD A NEW ITEM</h1>
             <p>Please fill in this form to add a new item</p>
             <hr>
@@ -86,12 +86,13 @@ else {	echo "successfully connected";}
         </body>
 </html>
 <?php
-
-$company = $_GET['item_company'];
-$name = $_GET['item_name'];
-$info = $_GET['item_info'];
-$price = $_GET['item_price'];
-$type = $_GET['item_type'];
+if($_GET['submit'])
+{
+$company = $_GET['itemcompany'];
+$name = $_GET['itemname'];
+$info = $_GET['iteminfo'];
+$price = $_GET['itemprice'];
+$type = $_GET['itemtype'];
 
 $query="INSERT INTO `item`(`item_company`, `item_name`, `item_info`, `item_price`, `item_type`) VALUES ('$company','$name','$info','$price','$type')";
 $row = mysqli_query($conn,$query);
@@ -104,5 +105,7 @@ else{
     echo "Item has not been registered";
 }
 
-header("refresh: url=index.php")
+header("refresh:1; url=index.php")
+}
+
 ?>

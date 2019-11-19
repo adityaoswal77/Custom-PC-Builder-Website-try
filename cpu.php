@@ -1,13 +1,4 @@
 <?php
-	session_start();
-	if(!isset($_SESSION['user_id']))
-	{
-		header("location: index.php");
-	}
-?>
-
-
-<?php
 $conn = mysqli_connect("localhost","root","","custom");
 if ($conn == false)
 {	echo "no connection";}
@@ -15,7 +6,7 @@ else {	echo "successfully connected";}
 ?>
 <html>
 <body>
-    <form name="login" action="cpu.php" onsubmit="return Register()"> 
+    <form name="login" action="" method="POST"> 
             <h1 id="">CREATE A NEW ACCOUNT</h1>
             <p>Please fill in this form.</p>
             <hr>
