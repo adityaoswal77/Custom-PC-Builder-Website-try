@@ -86,6 +86,7 @@
         </table>
         </form>
 </body>
+</html>
 
 <? php
 
@@ -106,20 +107,22 @@ if (isset($_POST['login']))
 
     if ($row <1){
         
-            {?>
+            ?>
                 <script>
                 alert("Invalid username or password");
                 window.open("login.php",self);
                 </script>
-            <?php}
+            <?php
         }
             
     else{
+        $data=mysqli_fetch_assoc($run);
+        $id=$data['user_id'];
         $id=$row["user_id"];
         echo "id = ".$id;
-        session_start();
-        $_SESSION["uid"] = $id;
-        header("location:index.php")
+//        session_start();
+  //      $_SESSION["uid"] = $id;
+    //    header("location:index.php")
     } 
+}
 ?>
-</html>

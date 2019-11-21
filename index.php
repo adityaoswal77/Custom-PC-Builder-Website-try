@@ -24,6 +24,12 @@
     <hr>      
 
 </div>
+
+<div class="intro">
+    <h2>Welcome to the Custom Builder.</h2>
+    <h4>Build your own dream PC using our Website.</h4>
+</div>
+
 </body>
 </center>
 </html>
