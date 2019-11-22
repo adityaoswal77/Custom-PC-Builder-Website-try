@@ -1,3 +1,15 @@
+<?php
+session_start();
+if(isset($_SESSION["uid"]))
+{
+    //header("location:index.php");
+}
+else{
+    header("location:login.php");
+}
+include("./connect.php");
+?>
+
 <html>
 <head>
 <title>admin</title>
@@ -49,11 +61,6 @@ ul li a{
 </style>
 
 
-
-
-
-
-
 <?php
 $conn = mysqli_connect("localhost","root","","custom");
 if ($conn == false)
@@ -86,13 +93,14 @@ else {	echo "successfully connected";}
         </body>
 </html>
 <?php
+include("connect.php");
 if($_GET['submit'])
 {
-$company = $_GET['itemcompany'];
-$name = $_GET['itemname'];
-$info = $_GET['iteminfo'];
-$price = $_GET['itemprice'];
-$type = $_GET['itemtype'];
+    $company = $_GET['itemcompany'];
+    $name = $_GET['itemname'];
+    $info = $_GET['iteminfo'];
+    $price = $_GET['itemprice'];
+    $type = $_GET['itemtype'];
 
 $query="INSERT INTO `item`(`item_company`, `item_name`, `item_info`, `item_price`, `item_type`) VALUES ('$company','$name','$info','$price','$type')";
 $row = mysqli_query($conn,$query);
@@ -104,8 +112,5 @@ if ($row==TRUE)
 else{
     echo "Item has not been registered";
 }
-
-header("refresh:1; url=index.php")
 }
-
 ?>

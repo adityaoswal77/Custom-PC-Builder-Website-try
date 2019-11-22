@@ -14,6 +14,7 @@
     <li style="background-color:blue; border-radius:40px;height:45px"><a href="insert.php">INSERT A NEW ITEM</a></li>
     <li style="background-color:chocolate; border-radius:40px; height:25px"><a href="delete.php"> DELETE </a></li>
     <li style="background-color:chocolate; border-radius:40px; height:25px"><a href="update.php"> UPDATE </a></li>
+    <li style="background-color:chocolate; border-radius:40px; height:25px"><a href="logout.php"> LOGOUT </a></li>
 
 </ul>      
     <hr>      
@@ -57,7 +58,7 @@ else {	echo "successfully connected";}
 <html>
 <body>
     <form name="login" action="cpu.php" onsubmit="return Register()"> 
-            <h1 id="">ADD A NEW ITEM</h1>
+            <h1 id="">DELETE A NEW ITEM</h1>
             <p>Please fill in this form to add a new item</p>
             <hr>
             <label for="itemcompany"><b>Company Name</b></label>
@@ -65,12 +66,6 @@ else {	echo "successfully connected";}
             <hr>
             <label for="itemname"><b>Item Name</b></label>
             <input type="text" placeholder="Enter the Item Name" name="itemname" required>
-            <hr>
-            <label for="iteminfo"><b>Item Info</b></label>
-            <input type="text" placeholder="Enter the item info" name="iteminfo" required>
-            <hr>
-            <label for="itemprice"><b>Item Price</b></label>
-            <input type="number" placeholder="Enter the Item price" name="itemprice"required >
             <hr>
             <label for="itemtype"><b>Item Type</b></label>
             <input type="text" placeholder="Enter the item type" name="itemtype" required>
@@ -83,11 +78,9 @@ else {	echo "successfully connected";}
 
 $company = $_GET['itemcompany'];
 $name = $_GET['itemname'];
-$info = $_GET['iteminfo'];
-$price = $_GET['itemprice'];
 $type = $_GET['itemtype'];
 
-$query="";
+$query="DELETE FROM `item` WHERE item_name='$name' || item_type='$'" ;
 $run = mysqli_query($conn,$query);
 if ($run==TRUE)
 {

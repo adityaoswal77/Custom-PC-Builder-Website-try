@@ -4,6 +4,20 @@
     <script src="formproscript.js"></script>
     <title>chooseur Processor</title>
 </head>
+
+<style>
+
+select{
+    width: 100%;
+    border: 1px solid black;
+    box-shadow: 1px 1px 2px 1px grey;
+    padding: 
+}
+
+
+
+</style>
+
 <body>
     <div id="formpro" style="position:relative; left:30% ;padding:30px; background-color:">
         <h1>Choose your Processor </h1>

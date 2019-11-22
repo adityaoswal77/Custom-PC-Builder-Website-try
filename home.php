@@ -31,11 +31,19 @@ include("./connect.php");
     <li style="background-color:chocolate; border-radius:20px; height:50px"><a href="./login.php"> Login </a></li>
     <li style="background-color:chocolate;border-radius:20px; height:50px"><a href="./register.php"> Register</a></li>
     <li style="background-color:chocolate;border-radius:20px; height:50px"><a href="./admin.php"> Admin</a></li>
-    <li style="background-color:chocolate;border-radius:20px; height:50px"><a href="./cart.php"> cart</a></li>
-    <li style="background-color:chocolate;border-radius:20px; height:50px"><a href="./logout.php"> Logout</a></li>
+
 </ul>      
     <hr>      
 
+</div>
+
+<div class="intro">
+    <h2>Welcome to the Custom Builder.</h2>
+    <h4>Build your own dream PC using our Website.</h4>
+    <a href="form.php">Click here to get Started</a>
+    <div>
+    
+    </div>
 </div>
 
 </body>

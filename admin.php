@@ -1,11 +1,18 @@
+<?php
+session_start();
+if(isset($_SESSION["uid"]))
+{
+    //header("location:index.php");
+}
+else{
+    header("location:login.php");
+}
+include("./connect.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="main.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>admin</title>
+    <title>Admin</title>
 </head>
 <body>
 <center>
@@ -19,6 +26,7 @@
     <li style="background-color:blue; border-radius:40px;height:45px"><a href="insert.php">INSERT A NEW ITEM</a></li>
     <li style="background-color:chocolate; border-radius:40px; height:25px"><a href="delete.php"> Delete </a></li>
     <li style="background-color:chocolate; border-radius:40px; height:25px"><a href="update.php"> Update </a></li>
+    <li style="background-color:chocolate; border-radius:40px; height:25px"><a href="logout.php"> LOGOUT </a></li>
 
 </ul>      
     <hr>      

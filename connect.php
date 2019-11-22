@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect("localhost","root","","demo");
+$conn = mysqli_connect("localhost","root","","custom");
 if ($conn == false)
 {
 	echo "no connection";
