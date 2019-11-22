@@ -23,10 +23,10 @@ include("./connect.php");
     
 <hr>
 <ul>
-    <li style="background-color:blue; border-radius:40px;height:45px"><a href="insert.php">INSERT A NEW ITEM</a></li>
+    <li style="background-color:chocolate; border-radius:40px; height:45px"><a href="./insert.php">INSERT A NEW ITEM</a></li>
     <li style="background-color:chocolate; border-radius:40px; height:25px"><a href="./login.php"> DELETE </a></li>
-    <li style="background-color:chocolate; border-radius:40px; height:25px"><a href="fetch.php"> UPDATE </a></li>
-
+    <li style="background-color:chocolate; border-radius:40px; height:25px"><a href="./update.php"> UPDATE </a></li>
+    <li style="background-color:chocolate; border-radius:40px; height:25px"><a href="'/logout.php"> LOGOUT </a></li>
 </ul>      
     <hr>      
 
