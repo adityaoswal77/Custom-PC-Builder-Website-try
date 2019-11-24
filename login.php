@@ -6,6 +6,7 @@ if(isset($_SESSION["uid"]))
 }
 
 include("./connect.php");
+error_reporting(0);
 ?>
 <!DOCTYPE html>
 <html>
@@ -18,18 +19,65 @@ include("./connect.php");
 <center>
 <div class="box">
     <h1>Login</h1>
-        <form name="Login" action="login.php" onsubmit="return validate(this) " method="Post">
+        <form name="Login"  action="login.php" onsubmit="return validate(this) " method="Post">
     <div class="textbox">
-        <input type="Email" placeholder="Email" name="mail" value="" required>
+        <input type="Email" class="txt" placeholder="Email" name="mail" value="" required>
     </div>
     <div class="textbox">
-        <input type="Password" placeholder="Password" name="pass" value="" required>
+        <input type="Password" class= "txt" placeholder="Password" name="pass" value="" required>
     </div>
-    <input class= "login" type="submit" name="login" value="Sign In">
+    <input class= "login" type="submit" name="login" id="popup" value="Sign In">
     <br>
     <a href="./register.php"><h4>Not have an Account?</h4> Register</a>
     </div>
 </form>
+
+<style>
+
+.container{
+    background-color : white;
+    box-shadow : 1px 1px 1px 1px grey;
+    padding : 10px 8px 20px 30px;
+    width : 40% ;
+    height : 85% ;
+    margin-left: 35%;
+
+}
+.txt{
+    width : 20%;
+    height : 3%;
+    border: 1px solid black;
+    border-radius : 5px;
+    padding: 20px 15px 20px 15px;
+    margin: 5px 0px 15px 0px;
+}
+
+.login{
+    width : 20%;
+    height : 3%;
+    border: 1px solid blue;
+    border-radius : 5px;
+    padding: 20px 15px 20px 15px;
+    margin: 5px 0px 15px 0px;
+}
+
+#popup{
+    width : 20%;
+    height : 3%;
+    border: 1px solid brown;
+    border-radius : 5px;
+    padding: 20px 15px 20px 15px;
+    margin: 5px 0px 15px 0px;
+}
+
+#popup:hover{
+    background-color: green;
+}
+
+</style>
+
+
+
 <script>
 function validate(this_form){
 var password = this_form.pass.value;
@@ -77,7 +125,7 @@ if (isset($_POST["login"]))
     {
         ?>
         <script>
-        alert("logged in");
+        alert("Wrong email or Password. <br> please try again");
         </script>
         <?php
     }

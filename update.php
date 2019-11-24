@@ -51,14 +51,12 @@ ul li a{
 
 <?php
 $conn = mysqli_connect("localhost","root","","custom");
-if ($conn == false)
-{	echo "no connection";}
-else {	echo "successfully connected";}
+error_reporting(0);
 ?>
 <html>
 <body>
     <form name="login" action="cpu.php" onsubmit="return Register()"> 
-            <h1 id="">ADD A NEW ITEM</h1>
+            <h1 id="">UPDATE AN ITEM</h1>
             <p>Please fill in this form to add a new item</p>
             <hr>
             <label for="itemcompany"><b>Company Name</b></label>

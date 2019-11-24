@@ -11,10 +11,7 @@ include("./connect.php");
 ?>
 <?php
 error_reporting(0);
-$conn = mysqli_connect("localhost","root","","custom");
-if ($conn == false)
-{	echo "no connection";}
-else {	echo "successfully connected";}
+include ('./connect.php')
 ?>
    <script type="text/javascript">
     //form validation
@@ -142,13 +139,16 @@ $pass = $_GET['pass'];
 if($name!="" && $email!="" && $phone!="" && $pass!="")
     {   
         $query="INSERT INTO `user`(`name`, `email`, `phone`, `password`) VALUES ('$name','$email','$phone','$pass')";
-        echo $query;
+        //echo $query;
         $run = mysqli_query($conn,$query);
         
             if ($run)
-            {
-                echo " Welcome" ;
+            {?>
+                <script>
+                alert(" Welcome" );
                 echo "You have been successfully Registered";
+                </script>
+            <?php
             }
     }
 
