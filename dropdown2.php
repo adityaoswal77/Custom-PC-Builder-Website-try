@@ -8,7 +8,7 @@ $mysqli = mysqli_connect('localhost','root','','custom');
 $resultSet = $mysqli->query("SELECT item_name FROM item where item_type = 'cpu'");
 
 ?> 
-<div class = "container">
+<div class = "container" align="center">
 <center>
     <div class="row">
             <h1 style="color:skyblue;border:1px solid black">THE CUSTOM PC BUILDER</h1> <br>
@@ -25,7 +25,7 @@ $resultSet = $mysqli->query("SELECT item_name FROM item where item_type = 'cpu'"
 
 		</div>
 
-</center>
+
 <style>
 h1{
     padding:20px
@@ -82,7 +82,7 @@ if($total > 0 ){
 	while($result=mysqli_fetch_assoc($data))
 	{
 		echo "<tr><td>". $result['item_company'] ."</td><td>". $result['item_name']. "</td><td> " .$result['item_info']. "</td><td>" .$result['item_price']. "</td></tr>";
-    echo "||";
+
 	}
 	//echo "table has records";
 }
@@ -90,12 +90,11 @@ else
 {}
 ?>
     </table>
-</center>
 
 
 <form align='center' action="dropdown2.php" method="POST">
 
-<h1>Choose 1 </h1>
+<h1>Choose Your Processor </h1>
   <select name = "item_cpu"  style = 'background:blue; width = 50px;'>
      <?php
 	  while($rows= $resultSet->fetch_assoc())
@@ -127,7 +126,7 @@ if($total > 0 ){
 	while($result=mysqli_fetch_assoc($data))
 	{
 		echo "<tr><td>". $result['item_company'] ."</td><td>". $result['item_name']. "</td><td> " .$result['item_info']. "</td><td>" .$result['item_price']. "</td></tr>";
-    echo "||";
+  
 	}
 	//echo "table has records";
 }
@@ -135,10 +134,10 @@ else
 {}
 ?>
     </table>
-</center>
 
 
- <h1>Choose 2 </h1>
+
+ <h1>Choose your Graphics Card </h1>
   <select name = "item_gpu"  style = 'background:lightblue; width = 50px;'>
      <?php
 	  while($rows= $resultSet->fetch_assoc())
@@ -172,7 +171,7 @@ if($total > 0 ){
 	while($result=mysqli_fetch_assoc($data))
 	{
 		echo "<tr><td>". $result['item_company'] ."</td><td>". $result['item_name']. "</td><td> " .$result['item_info']. "</td><td>" .$result['item_price']. "</td></tr>";
-    echo "||";
+  
 	}
 	//echo "table has records";
 }
@@ -180,10 +179,10 @@ else
 {}
 ?>
     </table>
-</center>
 
 
- <h1>Choose 3 </h1>
+
+ <h1>Choose your RAM</h1>
   <select name = "item_ram"  style = 'background:blue; width = 50px;'>
      <?php
 	  while($rows= $resultSet->fetch_assoc())
@@ -217,7 +216,6 @@ if($total > 0 ){
 	while($result=mysqli_fetch_assoc($data))
 	{
 		echo "<tr><td>". $result['item_company'] ."</td><td>". $result['item_name']. "</td><td> " .$result['item_info']. "</td><td>" .$result['item_price']. "</td></tr>";
-    echo "||";
 	}
 	//echo "table has records";
 }
@@ -228,7 +226,7 @@ else
 </center>
 
 
- <h1>Choose 4 </h1>
+ <h1>Choose your SSD</h1>
   <select name = "item_ssd"  style = 'background:lightblue; width = 50px;'>
      <?php
 	  while($rows= $resultSet->fetch_assoc())
@@ -238,7 +236,7 @@ else
 		?>
  </select>
  <div>
-        <input type="submit" value="Submit" name="order">
+        <input type="submit" value="Submit" name="order" class="select">
     </div>
 
 

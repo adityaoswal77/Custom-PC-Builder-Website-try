@@ -74,7 +74,7 @@ table, th,td{
     padding:10px; 
 }
 </style>
-
+<center>
     <table>
         <tr>
             <th>cpu</th>
@@ -84,36 +84,29 @@ table, th,td{
         </tr>
 <?php
 $conn = mysqli_connect("localhost","root","","custom");
-if ($conn == false)
-{	echo "no connection";}
-else {	echo "successfully connected";}
 
 $query = "SELECT `cart_cpu`,`cart_gpu`,`cart_ram`,`cart_ssd` FROM `cart`" ;
 $data =mysqli_query($conn,$query);
 $total = mysqli_num_rows($data);
-//echo $total; 
+echo "YOUR CART";
 if($total > 0 ){
 
 	while($result=mysqli_fetch_assoc($data))
 	{
-		echo "<tr><td>". $result['cart_cpu'] ."</td><td>". $result['cart_gpu']. "</td><td> " .$result['cart_ram']. "</td><td>" .$result['cart_ssd']. "</td></tr>";
-    echo "||";
+        
+        echo "<tr><td>". $result['cart_cpu'] ."</td><td>". $result['cart_gpu']. "</td><td> " .$result['cart_ram']. "</td><td>" .$result['cart_ssd']. "</td></tr>";
 	}
-	echo "table has records";
+	//echo "table has records";
 }
 else
-{	echo " table has no records";   }
+{  }
 ?>
-    </table>
-</body>
 </center>
+    </table>
+
+    <input type="submit" name="CHECKOUT" value="submit" >
+</body>
 </html>
-
-
-
-
-
-
 
     
     <style>
