@@ -100,7 +100,8 @@ if ($run==TRUE)
     echo " Welcome" .$run['name'] ;
     echo "Item has been successfully added";
 }
-else{
+else
+{
     echo "Item has not been registered";
 }
 if(isset($_POST['order']))
@@ -114,7 +115,8 @@ if(isset($_POST['order']))
         ?>
         <script>
         alert('succ added to cart');
-        </script>  <?php  
+        </script> 
+    <?php  
     }
 
 ?>

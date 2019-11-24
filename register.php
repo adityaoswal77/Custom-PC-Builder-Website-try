@@ -5,7 +5,7 @@ if(isset($_SESSION["uid"]))
     header("location:index.php");
 }
 else{
-    header("location:login.php");
+    //header("location:login.php");
 }
 include("./connect.php");
 ?>
@@ -88,9 +88,9 @@ else {	echo "successfully connected";}
                 <input type="password" class="txt" placeholder="Enter Password" name="pass" required>
                 
             <div>
-                <input type="submit"  id="popup" value="Submit" name="submit"></a>
-            </div>
-            <a href="./login.php"><h4>Already have an account?</h4>Login</a>
+            <a href="./login.php"><input type="submit"  id="popup" value="Submit" name="submit"></a>
+
+            <a href="./login.php"><h4>Already have an account? <br> Login</a>            </div>
     </form>
     </div>
     </body>
@@ -102,7 +102,7 @@ else {	echo "successfully connected";}
     box-shadow : 1px 1px 1px 1px grey;
     padding : 10px 8px 20px 30px;
     width : 40% ;
-    height : 80% ;
+    height : 85% ;
     margin-left: 35%;
 
 }

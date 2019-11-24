@@ -73,8 +73,7 @@ function get_recent()
 
 <?php get_recent(); ?>
 
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <title>Cart</title>
 </head>
@@ -93,9 +92,9 @@ function get_recent()
         <hr>      
     </div>
     
-          </body>
+ 
         </center>
-    </html>
+
     
     <style>
     h1{
