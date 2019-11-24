@@ -50,10 +50,9 @@ ul li a{
 </style>
 
 <?php
-$conn = mysqli_connect("localhost","root","","custom");
-if ($conn == false)
-{	echo "no connection";}
-else {	echo "successfully connected";}
+
+include ('./connect.php');
+error_reporting(0);
 ?>
 <html>
 <body>

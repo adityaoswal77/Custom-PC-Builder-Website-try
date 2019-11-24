@@ -81,7 +81,7 @@ if($num > 0 )
 					<div class="card-body">
 						 <img src="<?php echo $item['item_name'];  ?> ">
 
-					 <h6><?php echo $item['item_info'];  ?><span> (<?php echo $item['item_price'];  ?>Rupees) </span> </h6> 
+					 <h6> <?php echo $item['item_info'];  ?><span> (<?php echo $item['item_price'];  ?>Rupees) </span> </h6> 
 
 					 <h6 class="badge badge-success"> 5.0 <i class="fa fa-star"> </i> </h6>
 

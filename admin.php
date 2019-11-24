@@ -8,6 +8,7 @@ else{
     header("location:login.php");
 }
 include("./connect.php");
+error_reporting(0);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -30,6 +31,7 @@ include("./connect.php");
 
 </ul>      
     <hr>      
+    <h4>Need to add something here</h4>
 
 </div>
 </body>

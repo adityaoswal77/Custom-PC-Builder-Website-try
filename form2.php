@@ -58,6 +58,25 @@ include("./connect.php");
             <option>First Select Motherboard</option>
         </select>   
     </div>
+    <?php
+$resultSet = $mysqli->query2("SELECT item_name FROM item where item_type = 'cpu'");
+
+?> 
+<h1>Choose 1 </h1>
+  <select name = "item_cpu"  style = 'background:blue; width = 50px;'>
+     <?php
+	  while($rows= $resultSet->fetch_assoc())
+		{$item_name = $rows['item_name'];
+			echo "<option value='$item_name'>$item_name </option>";
+			}
+		?>
+ </select>
+ 
+ 
+ <?php
+$resultSet = $mysqli->query3("SELECT item_name FROM item where item_type = 'gpu'");
+
+?>
     <div>
         <input type="submit" value="Submit" name="order">
     </div>
