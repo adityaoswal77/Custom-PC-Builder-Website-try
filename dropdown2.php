@@ -1,5 +1,5 @@
 
-<link rel="stylesheet" href="style.css">
+<!-- <link rel="stylesheet" href="style.css"> -->
 
 <?php
 $mysqli = mysqli_connect('localhost','root','','custom');
@@ -95,7 +95,8 @@ else
 <form align='center' action="dropdown2.php" method="POST">
 
 <h1>Choose Your Processor </h1>
-  <select name = "item_cpu"  style = 'background:blue; width = 50px;'>
+<h4></h4>
+  <select name = "item_cpu"  style = 'background:lightblue; width = 50px;'>
      <?php
 	  while($rows= $resultSet->fetch_assoc())
 		{$item_name = $rows['item_name'];
@@ -136,7 +137,7 @@ else
     </table>
 
 
-
+<center>
  <h1>Choose your Graphics Card </h1>
   <select name = "item_gpu"  style = 'background:lightblue; width = 50px;'>
      <?php
@@ -179,11 +180,11 @@ else
 {}
 ?>
     </table>
+    </center>
 
-
-
+    <center>
  <h1>Choose your RAM</h1>
-  <select name = "item_ram"  style = 'background:blue; width = 50px;'>
+  <select name = "item_ram"  style = 'background:lightblue; width = 50px;'>
      <?php
 	  while($rows= $resultSet->fetch_assoc())
 		{$item_name = $rows['item_name'];
@@ -197,7 +198,7 @@ else
 $resultSet = $mysqli->query("SELECT item_name FROM item where item_type = 'ssd'");
 
 ?>
- <table>
+ <table align="center">
         <tr>
             <th>company</th>
             <th>product</th>
@@ -225,7 +226,7 @@ else
     </table>
 </center>
 
-
+<center>
  <h1>Choose your SSD</h1>
   <select name = "item_ssd"  style = 'background:lightblue; width = 50px;'>
      <?php
@@ -236,7 +237,7 @@ else
 		?>
  </select>
  <div>
-        <input type="submit" value="Submit" name="order" class="select">
+        <input type="submit" value="Submit" name="order" class="noob">
     </div>
 
 
@@ -264,6 +265,7 @@ if(isset($_POST['order']))
     }
 
 ?>
+</center>
 </div>
  </form>
  <style> 
@@ -282,7 +284,7 @@ if(isset($_POST['order']))
             .select { 
                 position: relative; 
                 display: block; 
-                width: 15em; 
+                width: 20em; 
                 height: 2em; 
                 line-height: 3; 
                 overflow: hidden; 
@@ -292,10 +294,7 @@ if(isset($_POST['order']))
             } 
             h1 { 
                 color:green; 
-            } 
-
-			h1{
-				padding:20px
+				padding:20px;
 			}
 			ul {
 				margin:0;
@@ -312,6 +311,16 @@ if(isset($_POST['order']))
 				text-decoration:none;
 				color:white;
 			}
+            .noob{
+                position: relative; 
+                display: block; 
+                width: 20em; 
+                height: 5em; 
+                line-height: 4; 
+                overflow: hidden; 
+                border-radius: .25em; 
+                padding-bottom:10px; 
+            }
 
 </style>  
 

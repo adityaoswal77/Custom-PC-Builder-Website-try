@@ -29,7 +29,8 @@ include("./connect.php");
 <ul>
     <li style="background-color:blue; border-radius:20px;height:50px"><a href="./home.php">Home</a></li>
     <li style="background-color:chocolate; border-radius:20px; height:50px"><a href="./logout.php"> Logout </a></li>
-    <li style="background-color:chocolate;border-radius:20px; height:50px"><a href="./admin.php"> Admin</a></li>
+    <li style="background-color:blue; border-radius:20px;height:50px"><a href="./aboutus.php">About the Website</a></li>
+    <!-- <li style="background-color:chocolate;border-radius:20px; height:50px"><a href="./admin.php"> Admin</a></li> -->
 
 </ul>      
     <hr>      
@@ -39,7 +40,8 @@ include("./connect.php");
 <div class="intro">
     <h2>Welcome to the Custom Builder.</h2>
     <h4>Build your own dream PC using our Website.</h4>
-<h4>WHat You should Know before getting into building a PC</h4>
+<h4>What You should Know before getting into building a PC</h4>
+<h2>These are the important components </h2>
 <h2>Graphics Card</h2>
 <p>Your <a href="https://www.google.com/search?biw=1707&bih=844&sxsrf=ACYBGNSSbplh0Wf4HnMheXCVfE4P1djaFA%3A1574623007087&ei=H9faXbPzBNKRwgPkn5vYAw&q=Why+do+i+need+a+Graphic+card&oq=Why+do+i+need+a+Graphic+card">graphics card</a> 
 is arguably the most important part of a gaming computer build. Anything displayed on your computer monitor has come directly from your graphics
@@ -66,7 +68,7 @@ instead of in a parallel manner (think multiple wires, or multiple ways to pass 
 information transfer (typically you will be limited by components like your CPU, storage drives, or graphics card long before 
 your motherboard).</p>
 
-    <a href="dropdown2.php">Click here to get Started</a>
+    <a href="dropdown2.php"><h1>Click here to get Started</h1></a>
     <div>
     
     </div>

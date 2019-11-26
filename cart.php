@@ -104,7 +104,8 @@ else
 </center>
     </table>
 
-    <input type="submit" name="CHECKOUT" value="submit" >
+    <input type="submit"  name="checkout" value="Checkout" >
+
 </body>
 </html>
 

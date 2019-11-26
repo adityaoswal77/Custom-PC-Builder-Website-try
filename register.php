@@ -64,7 +64,7 @@ include ('./connect.php')
 <html>
 <body>
 <div class="container"> 
-    <form name="login" action="" onsubmit="return validatefield()"> 
+    <form name="login" action="./login.php" onsubmit="return validate(this)"> 
                 <h1 id="">CREATE AN ACCOUNT</h1>
                 <p>Please fill in this form.</p>
                 <br>
@@ -91,7 +91,31 @@ include ('./connect.php')
     </form>
     </div>
     </body>
+    <script>
+function validate(this_form){
+var password = this_form.pass.value;
+var regex_password = /^[a-zA-Z0-9!@#$%^&*]{6,16}$/;
+errors = [];
+if (password.length < 8) {
+errors.push("Your password must be at least 8 characters");
+}
+if (password.search(/[a-z]/i) < 0) {
+errors.push("Your password must contain at least one letter.");
+}
+if (password.search(/[0-9]/) < 0) {
+errors.push("Your password must contain at least one digit.");
+}
+if (password.search(/[!@#$%^&*]/) < 0) {
+errors.push("Your password must contain at least one charactor.");
+}
+if (errors.length > 0) {
+alert(errors.join("\n"));
+return false;
+}
+return true;
+}
 
+</script>
 <style>
 
 .container{

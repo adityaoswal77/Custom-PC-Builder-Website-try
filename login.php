@@ -117,9 +117,10 @@ if (isset($_POST["login"]))
     $query="SELECT * FROM `user` WHERE `email`= '$username' AND `password`= '$password'";
     echo $query;
     $run = mysqli_query($conn,$query);
+
+    
     //$data= mysqli_fetch_assoc($run);
     $row = mysqli_num_rows($run);
-    echo $row;
 
     if($row<1)
     {
