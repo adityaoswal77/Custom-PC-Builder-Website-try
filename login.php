@@ -79,14 +79,17 @@ error_reporting(0);
 
 
 <script>
-function validate(this_form){
+function validate(this_form)
+{
 var password = this_form.pass.value;
 var regex_password = /^[a-zA-Z0-9!@#$%^&*]{6,16}$/;
 errors = [];
-if (password.length < 8) {
+if (password.length < 8) 
+{
 errors.push("Your password must be at least 8 characters");
 }
-if (password.search(/[a-z]/i) < 0) {
+if (password.search(/[a-z]/i) < 0) 
+{
 errors.push("Your password must contain at least one letter.");
 }
 if (password.search(/[0-9]/) < 0) {

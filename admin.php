@@ -24,6 +24,7 @@ error_reporting(0);
     
 <hr>
 <ul>
+    <li style="background-color:blue; border-radius:40px;height:45px"><a href="home.php">Home</a></li>
     <li style="background-color:blue; border-radius:40px;height:45px"><a href="insert.php">INSERT A NEW ITEM</a></li>
     <li style="background-color:chocolate; border-radius:40px; height:25px"><a href="delete.php"> Delete </a></li>
     <li style="background-color:chocolate; border-radius:40px; height:25px"><a href="fetch.php"> SHOW ALL THE LISTED ITEMS</a></li>
