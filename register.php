@@ -78,7 +78,7 @@ include ('./connect.php')
                 <br>
                 <label for="phone"><b>Phone number</b></label>
                 <br>
-                <input type="number" class="txt" placeholder="Enter phone number" name="phone"required >
+                <input type="number" class="txt" placeholder="Enter phone number" name="phone" required >
                 <br>
                 <label for="pass"><b>Password</b></label>
                 <br>
