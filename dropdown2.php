@@ -180,9 +180,7 @@ else
 {}
 ?>
     </table>
-    </center>
 
-    <center>
  <h1>Choose your RAM</h1>
   <select name = "item_ram"  style = 'background:lightblue; width = 50px;'>
      <?php
@@ -192,8 +190,7 @@ else
 			}
 		?>
  </select>
- 
- 
+
   <?php
 $resultSet = $mysqli->query("SELECT item_name FROM item where item_type = 'ssd'");
 
