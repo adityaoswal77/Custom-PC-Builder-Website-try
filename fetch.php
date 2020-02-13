@@ -67,6 +67,7 @@ table, th,td{
             <th>Price</th>
             <th>Item Type</th>
             <th>Action</th>
+            <th></th>
         </tr>
 
    
@@ -85,7 +86,7 @@ if(isset($_POST['delete']))
 ?>
 <?php
 $conn = mysqli_connect("localhost","root","","custom");
-$query = "SELECT `item_id`,`item_company`, `item_name`, `item_info`, `item_price`,`item_type` FROM `item`";
+$query = "SELECT * FROM `item`";
 $data =mysqli_query($conn,$query);
 $total = mysqli_num_rows($data);
 //echo $total; 
@@ -94,7 +95,14 @@ if($total > 0 ){
 	while($result=mysqli_fetch_assoc($data))
 	{
 
-		echo "<tr><td>". $result['item_company'] ."</td><td>". $result['item_name']. "</td><td> " .$result['item_info']. "</td><td>" .$result['item_price']. "</td><td>" .$result['item_type']. "</td><td>" .'<input type="button" value="delete id="delete" >'. "</td></tr>";
+        echo "<tr>
+                <td>". $result['item_company'] ."</td>
+                <td>". $result['item_name']. "</td>
+                <td>" .$result['item_info']. "</td>
+                <td>" .$result['item_price']. "</td>
+                <td>" .$result['item_type']. "</td>
+                <td>" .'<input type="button" value="delete id="delete" >'. "</td>
+            </tr>";
          ?>
          <form action="fetch.php" method="POST">
         <input type="hidden" value= "<?php  echo $result['item_id'] ?>"  name="delete">
